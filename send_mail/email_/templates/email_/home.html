@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Home Page</h1>
+    <a href="send_mail" >Click To Send Email</a> <br><br>
+
+    <table>
+        <tr>
+            <th>Sr No</th>
+            <th>Name</th>
+            <th>Email ID</th>
+            <th>Date Of Birth</th>
+            <th>Date Of Join</th>
+        </tr>
+        <tr>
+            {% for i in data %}
+            <tr>
+                <td>{{i.employee_ID}}</td>		
+                <td>{{i.employee_name}}</td>
+                <td>{{i.email_id}}</td>
+                <td>{{i.birth_date}}</td>
+                <td>{{i.join_date}}</td>
+            </tr>
+            {% endfor %}
+        <br>	
+        </tr>
+    </table>
+</body>
+</html>
